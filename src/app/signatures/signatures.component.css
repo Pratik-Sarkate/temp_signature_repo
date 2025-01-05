@@ -1,0 +1,67 @@
+.signatures-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    gap: 20px; /* Space between the signature cards */
+    padding: 20px;
+    background-color: #001f3f; /* Match the dark blue background */
+    min-height: 100vh;
+  }
+  
+  .signature-card {
+    background-color: #004080; /* Card background: blue */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff; /* White text color */
+    font-family: Arial, sans-serif; /* Font style */
+  }
+  
+  .signature-card .signature {
+    width: 100%;
+    height: auto;
+    background-color: #ffffff; /* White background for the signature */
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .signature-card .signature img {
+    max-width: 100%; /* Make sure the signature fits inside */
+    height: auto;
+  }
+  
+  .signature-card .name {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .action-buttons button {
+    background-color: #007bff; /* Button blue background */
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+    margin: 0 5px;
+  }
+  
+  .action-buttons button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
