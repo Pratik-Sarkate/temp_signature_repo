@@ -1,67 +1,113 @@
+.signature-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .signatures-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
     gap: 20px; /* Space between the signature cards */
     padding: 20px;
-    background-color: #001f3f; /* Match the dark blue background */
-    min-height: 100vh;
+    min-height: fit-content;
+    margin: 10px 20px;
+    width: 75vw;
   }
   
   .signature-card {
-    background-color: #004080; /* Card background: blue */
-    border-radius: 8px; /* Rounded corners */
+    background-color: #204675; /* Card background: blue */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    padding: 15px;
+    padding: 30px 15px;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #ffffff; /* White text color */
     font-family: Arial, sans-serif; /* Font style */
   }
+
+  .signature-card-container {
+    width: 100%;
+  }
   
   .signature-card .signature {
     width: 100%;
     height: auto;
-    background-color: #ffffff; /* White background for the signature */
-    border-radius: 4px;
+    /* background-color: #ffffff; */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    /* padding: 10px 5px; */
     box-sizing: border-box;
   }
   
   .signature-card .signature img {
-    max-width: 100%; /* Make sure the signature fits inside */
+    width: 80%; /* Make sure the signature fits inside */
     height: auto;
   }
   
   .signature-card .name {
+    margin: 10px 0;
+    height: auto;
+    width: 75%;
+    font-size: 12px;
+  }
+
+  .signature-card .name-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     margin-top: 10px;
     font-size: 16px;
-    font-weight: bold;
   }
   
-  .action-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+  .name {
+    color: #586C85;
+    margin: 10px 0px;
+  }
+
+  .name-container > hr {
+    width: 100%;;
+  }
+
+  .name-value {
     width: 100%;
+    color: #ffffff;
+  }
+
+  .name-value > input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    color: #586C85;
+    font-size: 14px;
+  }
+
+  .action-buttons-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    justify-content: space-between;
+    margin: 10px 10px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
   }
   
-  .action-buttons button {
-    background-color: #007bff; /* Button blue background */
+  .action-buttons{
+    background-color: #1d2a3b;
     color: white;
     border: none;
-    padding: 8px 10px;
+    padding: 5px;
     font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
     flex: 1;
-    margin: 0 5px;
+    width: fit-content;
   }
   
-  .action-buttons button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+  .required {
+    color: red;
   }
   
