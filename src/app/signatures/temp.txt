@@ -48,3 +48,14 @@ signatures: { name: string; imgUrl: string; isEditing: boolean }[] = [];
       error: (err) => console.error('Error fetching signatures:', err)
     });
   }
+
+
+
+
+// dummy api creds and endpoint
+
+email: malebor915@pariag.com
+pass: Srushti@123
+
+
+endpoint: https://6781021285151f714b08f347.mockapi.io/signatures
