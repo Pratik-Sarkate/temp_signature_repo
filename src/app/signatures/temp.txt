@@ -1,0 +1,50 @@
+
+// signatures.service.ts
+
+
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class SignaturesService {
+  private apiUrl = 'https://your-api-endpoint.com/signatures'; // Replace with your API endpoint
+
+  constructor(private http: HttpClient) {}
+
+  getSignatures(): Observable<{ name: string; imgUrl: string }[]> {
+    return this.http.get<{ name: string; imgUrl: string }[]>(this.apiUrl);
+  }
+}
+
+
+
+
+
+--------------------
+
+// in signature_extraction ts file
+
+
+signatures: { name: string; imgUrl: string; isEditing: boolean }[] = [];
+
+  constructor(
+    public router: Router,
+    private signaturesService: SignaturesService
+  ) {}
+
+  ngOnInit(): void {
+    // Fetch signatures from the API
+    this.signaturesService.getSignatures().subscribe({
+      next: (data) => {
+        this.signatures = data.map((item) => ({
+          name: item.name,
+          imgUrl: item.imgUrl,
+          isEditing: false,
+        }));
+      },
+      error: (err) => console.error('Error fetching signatures:', err)
+    });
+  }
