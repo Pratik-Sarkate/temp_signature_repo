@@ -54,6 +54,7 @@ signatures: { name: string; imgUrl: string; isEditing: boolean }[] = [];
 
 // dummy api creds and endpoint
 
+website: https://mockapi.io/
 email: malebor915@pariag.com
 pass: Srushti@123
 
